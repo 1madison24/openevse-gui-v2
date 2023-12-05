@@ -78,6 +78,7 @@
     "status-tile-delivered": "delivered",
     "status-tile-current": "current",
     "status-tile-power": "power",
+    "status-tile-maxpower": "maxpower",
     "status-tile-setpoint": "setpoint",
     "status-tile-shaper": "Shaper",
     "status-tile-selfprod": "Production",

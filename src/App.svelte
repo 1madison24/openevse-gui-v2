@@ -82,14 +82,14 @@
 	{#if $uistates_store.data_loaded}
 
 		<div class="route" class:wizard={$location.includes("/wizard")}>
-			{#if $status_store?.evse_connected && !$location.includes("/wizard")}
+			{#if !$status_store?.evse_connected && !$location.includes("/wizard")}
 			<div class="status mx-3 mt-1 p-0">
 				<Status />
 			</div>
-			{/if}
-			{#if !$status_store.evse_connected}
+			{/if} 
+			<!-- {#if !$status_store.evse_connected}
 			<AlertBoxNoModal title={$_("alert-evsemissing-title")} body={$_("alert-evsemissing-body")} visible={true} />
-			{/if}
+			{/if} -->
 			{#if !$uistates_store.ws_connected}
 			<AlertBoxNoModal title={$_("alert-conerror-title")} body={$_("alert-conerror-body")} visible={true} />
 			{/if}

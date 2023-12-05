@@ -78,7 +78,7 @@
 		{ title: "elapsed", value: sec2time($elapsed)},
 		{ title: "delivered", value: $status_store.session_energy/1000, precision: 2, unit: $_("units.kwh") },
 		{ title: "current", value: $status_store.amp/1000, precision: 1, unit: $_("units.A") },
-		{ title: "power", value: $status_store.power, unit: $_("units.W") },
+		{ title: "maxpower", value: $status_store.power, unit: $_("units.W") },
 		{ title: "setpoint", value: $status_store.pilot, unit: $_("units.A") },
 		{ title: "selfprod", value: $status_store.charge_rate,  unit: $_("units.A"), precision: 1, display: $config_store.divert_enabled },
 		{ title: "shaper", value: $status_store.shaper_cur,  unit: $_("units.A"), precision: 1, display: $config_store.current_shaper_enabled },
@@ -141,7 +141,7 @@
 
 </style>
 <svelte:window on:resize={()=>redraw++} />
-{#if $status_store.evse_connected == 1 && $uistates_store.data_loaded && mounted}
+<!-- {#if $status_store.evse_connected == 1 && $uistates_store.data_loaded && mounted} -->
 <div class="container statusbox {state2color($status_store.state)} has-background-color-light px-1 pt-2 pb-1 has-background-light">
 	<div>
 		<div class="mb-2 mx-0">
@@ -213,13 +213,13 @@
 		{/key}
 	</div>
 </div>
-{:else}
+<!-- {:else}
 <div class="statusbox disabled has-background-light mb-5 mt-0 px-3 has-text-centered">
 	<h4 class="title">EVSE Error</h4>
 	<h5>OpenEVSE module is not responding</h5>
 	<div class="block">Please check your setup before going further</div>
 	<button class="button is-info is-outlined my-3" on:click={()=>location.reload()}>Force Reload</button>
-</div>
-{/if}
+</div> -->
+<!-- {/if} -->
 
 
