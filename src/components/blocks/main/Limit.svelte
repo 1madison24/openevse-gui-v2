@@ -15,7 +15,7 @@
 	import Select 			from "./../../ui/Select.svelte";
 	import Borders 			from "./../../ui/Borders.svelte";
 
-	export let is_admin = false
+	export let is_admin = true
 
 	let mounted = false
 
